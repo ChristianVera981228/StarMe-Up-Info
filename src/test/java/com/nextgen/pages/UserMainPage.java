@@ -21,12 +21,34 @@ public class UserMainPage extends BasePage {
         return avatarImg.isDisplayed();
     }
 
-    public void getSentStars(){
+    public Integer getSentStars(){
 
         System.out.println(metricSentStars.toString());
-
+        try{
+            Thread.sleep(10000);
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+        
         String metricValue = metricSentStars.getText();
         System.out.println("Estrellas enviadas: " + metricValue);
+        return Integer.parseInt(metricValue);
+
+    }
+
+    public Integer getRecievedStars(){
+
+        System.out.println(metricRecievedStars.toString());
+        try{
+            Thread.sleep(10000);
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+        
+        String metricValue = metricRecievedStars.getText();
+        System.out.println("Estrellas recibidas: " + metricValue);
+            
+        return Integer.parseInt(metricValue);
 
     }
 }

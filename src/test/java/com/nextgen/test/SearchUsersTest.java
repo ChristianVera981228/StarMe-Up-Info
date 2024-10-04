@@ -1,5 +1,6 @@
 package com.nextgen.test;
 
+import com.nextgen.model.Glober;
 import com.nextgen.pages.HomePage;
 import com.nextgen.pages.LandingPage;
 import com.nextgen.pages.UserMainPage;
@@ -31,8 +32,15 @@ public class SearchUsersTest extends BaseTest {
 
         userMainPage.untilSentStarsIsDisplayed();
 
-        userMainPage.getSentStars();
+        Integer sentStars = userMainPage.getSentStars();
 
+        Integer recieveStars = userMainPage.getRecievedStars();
+
+        Glober glober = new Glober(sentStars, recieveStars);
+
+        System.out.println(glober);
+
+    
         Assert.assertTrue(userMainPage.isAvatarDisplayed());
 
 

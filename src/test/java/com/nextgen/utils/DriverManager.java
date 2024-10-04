@@ -25,6 +25,10 @@ public class DriverManager {
         }
     }
 
+    public WebDriver getDriver(){
+        return driver;
+    }
+
 
     public void goToUrl(String url) {
         if (url == null || url.isEmpty()) {

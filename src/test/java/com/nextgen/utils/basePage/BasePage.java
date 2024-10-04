@@ -31,8 +31,12 @@ public class BasePage {
     protected List<WebElement> userResultsList;
     @FindBy(css = ".ui-user-profile-user-avatar__avatar")
     protected WebElement avatarImg;
-    @FindBy(css = ".profile-metric-content__value")
+    //".suite-segment__children a:nth-child(2) .profile-metric-content__value
+    @FindBy(css = ".suite-segment__children a:nth-child(2) .profile-metric-content__value")
     protected WebElement metricSentStars;
+
+    @FindBy(css = ".suite-segment__children a:nth-child(1) .profile-metric-content__value")
+    protected WebElement metricRecievedStars;
 
     public BasePage(WebDriver pageDriver) {
         driver = pageDriver;
